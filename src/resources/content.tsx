@@ -46,7 +46,7 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: "Portfolio | Joel George",
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Where intuitive UI meets effortless UX</>,
   featured: {
@@ -73,7 +73,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
+  title: "About | Joel George",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -200,6 +200,7 @@ const about: About = {
           {
             name: "JavaScript",
             icon: "javascript",
+            // ...
           },
           {
             name: "Next.js",
@@ -236,7 +237,7 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
+  title: "Projects | Joel George",
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
@@ -245,7 +246,7 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
+  title: "Gallery | Joel George",
   description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own

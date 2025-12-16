@@ -2,7 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
-import { Column, Heading, Text, useTheme } from "@once-ui-system/core";
+import { Column, Heading, Text, useTheme, Meta } from "@once-ui-system/core";
+import { baseURL } from "@/resources";
+
+export async function generateMetadata() {
+  return Meta.generate({
+    title: "Connect | Joel George",
+    description: "Schedule a time to discuss your project.",
+    baseURL: baseURL,
+    path: "/scheduler",
+  });
+}
 
 export default function Scheduler() {
     const { theme } = useTheme();
