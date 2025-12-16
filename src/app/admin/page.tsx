@@ -144,7 +144,7 @@ export default function AdminPage() {
   // Dashboard
   return (
       <Column fillWidth padding="l" gap="xl" style={{ maxWidth: "100%" }}>
-                  <Row fillWidth justify="space-between" align="center">
+                  <Row fillWidth horizontal="between" align="center">
                       <Heading>Admin Dashboard</Heading>
                       <Button variant="secondary" onClick={() => window.location.reload()}>Logout</Button>
                   </Row>
@@ -155,6 +155,7 @@ export default function AdminPage() {
                      <Column fillWidth gap="xs">
                         {/* Password Input - Using standard component for consistent styling */}
                         <PasswordInput 
+                            id="new-master-password"
                             label="New Master Password" 
                             value={newMasterPass} 
                             onChange={(e) => setNewMasterPass(e.target.value)} 
@@ -162,7 +163,7 @@ export default function AdminPage() {
                         />
                         
                         {/* Generate Button & Requirements */}
-                        <Row fillWidth justify="space-between" align="center">
+                        <Row fillWidth horizontal="between" align="center">
                              <Text variant="body-default-xs" onBackground="neutral-weak">
                                 Requirement: 12 chars, 1 Uppercase, 1 Lowercase, 1 Special, 1 Number.
                              </Text>
@@ -178,7 +179,7 @@ export default function AdminPage() {
                         
 
                         
-                        <Row justify="end" marginTop="s">
+                        <Row horizontal="end" marginTop="s">
                             <Button variant="primary" onClick={handleUpdateMasterPassword}>Update</Button>
                         </Row>
                      </Column>
@@ -187,7 +188,7 @@ export default function AdminPage() {
 
           {/* Projects Section */}
           <Column gap="m">
-            <Row justify="space-between" align="center">
+            <Row horizontal="between" align="center">
                 <Heading variant="heading-strong-m">Projects</Heading>
                 <Row gap="s">
                     <Button variant="secondary" onClick={async () => {
@@ -211,7 +212,7 @@ export default function AdminPage() {
             ) : (
                 <Column gap="s">
                     {projects.map(p => (
-                        <Row key={p.id} background="surface" padding="m" radius="m" border="neutral-alpha-weak" justify="space-between" align="center">
+                        <Row key={p.id} background="surface" padding="m" radius="m" border="neutral-alpha-weak" horizontal="between" align="center">
                             <Column>
                                 <Text variant="heading-strong-s">{p.title}</Text>
                                 <Text variant="body-default-xs" onBackground="neutral-weak">/{p.slug} • {p.is_protected ? "Locked 🔒" : "Public 🌍"}</Text>
@@ -259,9 +260,9 @@ function ProjectEditor({ initialData, onSave, onCancel, onUpload }: any) {
         <Column background="surface" padding="l" radius="l" border="neutral-alpha-weak" gap="m">
             <Heading variant="heading-strong-s">{formData.id ? "Edit Project" : "New Project"}</Heading>
             
-            <Input label="Title" value={formData.title || ""} onChange={(e) => handleChange("title", e.target.value)} />
-            <Input label="Slug (URL)" value={formData.slug || ""} onChange={(e) => handleChange("slug", e.target.value)} />
-            <Input label="Description" value={formData.description || ""} onChange={(e) => handleChange("description", e.target.value)} />
+            <Input id="project-title" label="Title" value={formData.title || ""} onChange={(e) => handleChange("title", e.target.value)} />
+            <Input id="project-slug" label="Slug (URL)" value={formData.slug || ""} onChange={(e) => handleChange("slug", e.target.value)} />
+            <Input id="project-description" label="Description" value={formData.description || ""} onChange={(e) => handleChange("description", e.target.value)} />
             
             <Column gap="xs">
                 <Text variant="label-default-s">Content (Markdown)</Text>
@@ -304,7 +305,7 @@ function ProjectEditor({ initialData, onSave, onCancel, onUpload }: any) {
                         </label>
                     </Row>
                     {formData.password_type === 'custom' && (
-                        <Input label="Custom Password" value={formData.custom_password || ""} onChange={(e) => handleChange("custom_password", e.target.value)} />
+                        <Input id="custom-password" label="Custom Password" value={formData.custom_password || ""} onChange={(e) => handleChange("custom_password", e.target.value)} />
                     )}
                 </Column>
             )}
