@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
+  console.log("Contact API Received Request");
   try {
     const { name, email, subject, message } = await req.json();
 
