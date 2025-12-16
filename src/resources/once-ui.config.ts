@@ -13,15 +13,18 @@ import {
 } from "@/types";
 import { home } from "./index";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schem
+const baseURL: string = "https://jooeeyy.vercel.app";
 
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
+  "/blog": false,
   "/gallery": true,
+  "/scheduler": true,
+  "/admin": true,
+  "/admin/analytics": true,
 };
 
 const display: DisplayConfig = {
@@ -190,7 +193,7 @@ const schema: SchemaConfig = {
   type: "Organization",
   name: "Once UI",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "joelgeorge43@gmail.com",
 };
 
 // social links

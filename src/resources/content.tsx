@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "George",
   name: `Joel George`,
   role: "UX UI Designer",
-  avatar: "/images/dp.jpg",
+  avatar: "/images/dp.png",
   email: "joelgeorge43@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Hindi", "Malayalam", "Tamil"], // optional: Leave the array empty if you don't want to display languages
@@ -14,8 +14,12 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  title: <>Have a product vision?</>,
+  description: (
+    <>
+      Got an idea brewing? Let’s design it into a seamless experience together.
+    </>
+  ),
 };
 
 const social: Social = [
@@ -24,17 +28,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/joelgeorge43",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
     link: "https://www.linkedin.com/in/jooeeyy/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
   },
   {
     name: "Email",
@@ -49,12 +48,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Where intuitive UI meets effortless UX</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Joel George</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -65,13 +64,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Joel, a UX UI Designer at{"Sanse Solutions Gen Trading LLC."}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
+      I'm Joel, a UX UI Designer at Sans Solutions, where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
@@ -91,16 +84,14 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "/scheduler",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Joel is a Kochi-based UX UI Designer and Front-end Developer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Joel is a Kochi-based UX/UI Designer and Graphic Designer who transforms ideas into refined, user-centered visual experiences. He works across interfaces, branding, and digital interactions—merging usability with aesthetic clarity.
       </>
     ),
   },
@@ -108,10 +99,11 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
+      
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Sans Solutions",
+        timeframe: "2023 - Present",
+        role: "UX UI Designer",
         achievements: [
           <>
             Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
@@ -133,9 +125,9 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Bagmo Private Limited",
+        timeframe: "2024 - Present",
+        role: "Lead - Business Development",
         achievements: [
           <>
             Developed a design system that unified the brand across multiple platforms, improving
@@ -155,12 +147,16 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Saintgits College of Engineering",
+        description: <>Bachelor of Technology in Electronics and Communication Engineering.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "University of Michigan",
+        description: <>Certificate Course for Learning Web Development: Introduction to HTML5.</>,
+      },
+      {
+        name: "Techmindz by NDZ",
+        description: <>Certificate Course for UI UX Design and Development.</>,
       },
     ],
   },
@@ -223,7 +219,7 @@ const about: About = {
             height: 9,
           },
         ],
-      },  
+      },
     ],
   },
 };
