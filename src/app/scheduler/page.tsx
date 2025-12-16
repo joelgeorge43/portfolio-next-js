@@ -35,6 +35,7 @@ export default function Scheduler() {
                     "cal-border-booker": "transparent",
                     "cal-bg-muted": "transparent",
                     "cal-bg": "transparent",
+                    "cal-bg-emphasis": "transparent",
                     "cal-text": "#FFFFFF",
                     "cal-text-muted": "#9CA3AF"
                 },
@@ -42,6 +43,7 @@ export default function Scheduler() {
                     "cal-border-booker": "transparent",
                     "cal-bg-muted": "transparent",
                     "cal-bg": "transparent",
+                    "cal-bg-emphasis": "transparent",
                     "cal-text": "#000000",
                     "cal-text-muted": "#4B5563"
                 }
