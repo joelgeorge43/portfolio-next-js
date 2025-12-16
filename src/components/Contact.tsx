@@ -45,13 +45,11 @@ export const Contact: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex
         console.error("API Error data:", data);
         setStatus("error");
         setErrorDetails(data.error || "Something went wrong");
-        alert(`Error: ${data.error || "Something went wrong"}`);
       }
     } catch (error) {
       console.error("Submission error:", error);
       setStatus("error");
       setErrorDetails("Failed to send message");
-      alert("Error: Failed to send message. Please check your connection.");
     }
   };
 
