@@ -29,8 +29,7 @@ export const Footer = () => {
         
         <Row 
             gap="16" 
-            style={{ position: "absolute", right: "16px" }}
-            s={{ position: "static" }}
+            className={styles.social}
         >
           {social.map(
             (item) =>

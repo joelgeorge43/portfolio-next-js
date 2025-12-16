@@ -2,6 +2,16 @@
 
 @media (max-width: breakpoints.$s) {
     .mobile {
-        text-align: center;
+        flex-direction: column;
+        gap: var(--static-space-16);
+    }
+}
+
+.social {
+    position: absolute;
+    right:var(--static-space-16);
+
+    @media (max-width: breakpoints.$s) {
+        position: static;
     }
 }
