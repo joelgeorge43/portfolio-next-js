@@ -3,6 +3,7 @@ import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
 
 import classNames from "classnames";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import {
   Background,
@@ -169,6 +170,7 @@ export default async function RootLayout({
             </Column>
           </AnalyticsProvider>
         </Providers>
+        <SpeedInsights />
       </body>
     </Flex>
   );
