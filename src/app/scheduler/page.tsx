@@ -26,7 +26,8 @@ export default function Scheduler() {
 		cal("ui", {
             theme: calTheme,
             styles: { 
-                branding: { brandColor: "#000000" },
+                branding: { brandColor: "#FFFFFF" },
+                body: { background: 'transparent' }
             },
             hideEventTypeDetails: false,
             layout: "month_view",
@@ -36,6 +37,7 @@ export default function Scheduler() {
                     "cal-bg-muted": "transparent",
                     "cal-bg": "transparent",
                     "cal-bg-emphasis": "transparent",
+                    "cal-bg-subtle": "transparent",
                     "cal-text": "#FFFFFF",
                     "cal-text-muted": "#9CA3AF"
                 },
@@ -44,6 +46,7 @@ export default function Scheduler() {
                     "cal-bg-muted": "transparent",
                     "cal-bg": "transparent",
                     "cal-bg-emphasis": "transparent",
+                    "cal-bg-subtle": "transparent",
                     "cal-text": "#000000",
                     "cal-text-muted": "#4B5563"
                 }
