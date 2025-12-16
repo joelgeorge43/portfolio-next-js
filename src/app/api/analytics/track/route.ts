@@ -11,8 +11,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Get geolocation from request headers (Vercel provides this)
-    const country = request.geo?.country || "Unknown";
-    const city = request.geo?.city || "Unknown";
+    const country = (request as any).geo?.country || "Unknown";
+    const city = (request as any).geo?.city || "Unknown";
 
     // Upsert visitor record
     const { data: existingVisitor } = await supabaseAdmin
