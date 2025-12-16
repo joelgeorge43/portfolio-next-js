@@ -130,7 +130,7 @@ export default function AdminPage() {
           <Flex fillWidth fillHeight center paddingY="128" gap="l">
               <Column center gap="l">
                   <Heading>Admin Login</Heading>
-                  <Column width="30rem" gap="m">
+                  <Column style={{ width: "30rem" }} gap="m">
                       <Input label="Username" value={username} onChange={(e) => setUsername(e.target.value)} autoComplete="off" />
                       <PasswordInput label="Password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="new-password" />
                       {loginError && <Text variant="body-default-s" onBackground="danger-weak">{loginError}</Text>}
