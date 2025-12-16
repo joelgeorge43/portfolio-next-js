@@ -20,8 +20,9 @@ export const Contact: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submitted", formData);
     setStatus("submitting");
     setErrorDetails("");
 
@@ -34,15 +35,19 @@ export const Contact: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex
         body: JSON.stringify(formData),
       });
 
+      console.log("API Response status:", response.status);
+
       if (response.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         const data = await response.json();
+        console.error("API Error data:", data);
         setStatus("error");
         setErrorDetails(data.error || "Something went wrong");
       }
     } catch (error) {
+      console.error("Submission error:", error);
       setStatus("error");
       setErrorDetails("Failed to send message");
     }
@@ -175,7 +180,7 @@ export const Contact: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex
                 onChange={handleChange}
              />
 
-            <Button size="l" fillWidth loading={status === "submitting"}>
+            <Button size="l" fillWidth loading={status === "submitting"} type="submit">
                 Send Enquiry
             </Button>
             {status === "error" && (
