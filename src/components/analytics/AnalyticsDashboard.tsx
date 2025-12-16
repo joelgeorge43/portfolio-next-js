@@ -192,7 +192,7 @@ export default function AnalyticsDashboard() {
             <Row
               key={index}
               fillWidth
-              justify="space-between"
+              horizontal="between"
               padding="s"
               background="neutral-alpha-weak"
               radius="m"
