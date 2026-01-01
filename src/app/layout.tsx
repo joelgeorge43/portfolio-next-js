@@ -17,7 +17,7 @@ import {
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import AnalyticsProvider from "@/components/analytics/AnalyticsProvider";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
-import CircularText from "@/components/react-bits/CircularText";
+
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -173,10 +173,6 @@ export default async function RootLayout({
           </AnalyticsProvider>
         </Providers>
         <SpeedInsights />
-        <div suppressHydrationWarning>
-            {/* Dynamic import or check to prevent hydration mismatch if needed, but 'use client' handles it */}
-            <CircularText />
-        </div>
       </body>
     </Flex>
   );
